@@ -63,7 +63,7 @@ def pixel_to_text(image_file, image_width, image_height):
     line_list = []
   return image_list
 
-def image_to_text_writing(image_list, image_name):
+def image_to_text_writing(image_list, image_name, *args):
   """
   image_list: list of every pixel of the image converted into characters
   image_name: name of the image excluding the path
@@ -75,12 +75,14 @@ def image_to_text_writing(image_list, image_name):
   # resets the file or create it if it doesn't exist
   with open(full_path_name, "w") as file:
     file.write("")
-  # creates the text image
+  # writes the text file
   with open(full_path_name, "a") as file:
     for line in image_list:
       file.write(line+"\n")
-  #with open(full_path_name, "r") as file:
-    #print(file.read())
+  # prints in terminal
+  if "-terminal" in args:
+    with open(full_path_name, "r") as file:
+      print(file.read())
 
 def get_folder_name():
   return str(Path(__file__).parent.resolve()) + "/image_to_text_files"
