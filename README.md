@@ -4,6 +4,6 @@ An app made to transform any image into text.
 
 ## How to Use
 - Execute main.py with Python.
-- Select any image you want to turn into text (size cannot currently be selected).
-- Go to Image-To-Text-Render/image_to_text_files and open the .txt document corresponding the selected image.
+- Select any image you want to turn into text (size currently cannot be selected).
+- Go to Image-To-Text-Render/image_to_text_files and open the .txt document corresponding to the selected image.
 - Have fun rickrolling your friends!
